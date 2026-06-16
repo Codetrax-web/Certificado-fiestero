@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado Festero VIP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="initial-form">
+    <h2>✨ ¡Comencemos la Celebración! ✨</h2>
+    <label>Tu Nombre:</label>
+    <input type="text" id="name-input" placeholder="Nombre completo">
+    <label>Tu Género:</label>
+    <select id="gender-select">
+        <option value="male">Masculino</option>
+        <option value="female">Femenino</option>
+    </select>
+    <button class="btn-estilo-ui" onclick="showEmail()">¡Listo!</button>
+</div>
+
+<div class="container" id="email-view" style="display:none;">
+    <h3>De: Salón de Eventos VIP 💌</h3>
+    <p>Para: <span id="recipient-name"></span></p>
+    <hr>
+    <p>Estimado/a, <strong><span id="email-name-display"></span></strong></p>
+    <button class="btn-estilo-ui" onclick="showCertificate()">ABRIR RECONOCIMIENTO</button>
+</div>
+
+<div id="certificate-view" style="display:none;">
+    <div class="certificate-header">
+        <h1>DIPLOMADO VIP</h1>
+        <p class="subtitle">Otorgado con honor y distinción</p>
+    </div>
+    <div class="gold-line"></div>
+    <p class="certificate-text">Se hace constar que</p>
+    <span class="name-highlight" id="certificate-name-display"></span>
+    <p class="certificate-text">Por ser tan excepcional con la bebida y el ambiente en cada celebración.</p>
+    <p class="title-highlight" id="title-display"></p>
+    <div class="seal">VIP</div>
+    <div class="certificate-footer">
+        <div class="signature"><div class="signature-line"></div>Comité Organizador</div>
+        <div class="date"><div class="signature-line"></div>Año 2026</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+<audio id="celebrationMusic"><source src="musica.mp3" type="audio/mpeg"></audio>
+</body>
+</html>
